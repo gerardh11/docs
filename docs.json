@@ -1,72 +1,105 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mintlify Starter Kit",
+  "name": "LINA Transcript",
+  "description": "Guía de uso de LINA Transcript, el asistente de documentación clínica de Doole Health.",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#2563eb",
+    "light": "#60a5fa",
+    "dark": "#1d4ed8"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/favicon.ico",
+  "logo": {
+    "light": "/logo/lina.png",
+    "dark": "/logo/lina.png",
+    "href": "https://docs.linahealthtranscript.com"
+  },
   "navigation": {
-    "pages": [
+    "groups": [
       {
-        "group": "Getting Started",
+        "group": "Primeros pasos",
         "pages": [
           "index",
-          "quickstart"
+          "primeros-pasos/crear-cuenta",
+          "primeros-pasos/tu-primera-consulta",
+          "primeros-pasos/la-interfaz"
+        ]
+      },
+      {
+        "group": "Consultas",
+        "pages": [
+          "consultas/grabar",
+          "consultas/transcripcion",
+          "consultas/nota-clinica",
+          "consultas/asistente",
+          "consultas/exportar",
+          "consultas/valoraciones"
+        ]
+      },
+      {
+        "group": "Ajustar LINA a tu forma de trabajar",
+        "pages": [
+          "personalizacion/plantillas",
+          "personalizacion/terminologia",
+          "personalizacion/vocabulario",
+          "personalizacion/idiomas"
+        ]
+      },
+      {
+        "group": "Pacientes y equipo",
+        "pages": [
+          "equipo/pacientes",
+          "equipo/huellas-de-voz",
+          "equipo/mi-centro",
+          "equipo/plan-y-facturacion"
+        ]
+      },
+      {
+        "group": "Privacidad y datos",
+        "pages": [
+          "privacidad/donde-se-procesan-los-datos",
+          "privacidad/consentimiento"
+        ]
+      },
+      {
+        "group": "Ayuda",
+        "pages": [
+          "ayuda/consejos",
+          "ayuda/preguntas-frecuentes",
+          "ayuda/problemas",
+          "ayuda/contacto"
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
-  },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    ]
   },
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "Soporte",
+        "href": "mailto:info@linahealth.ai"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://app.mintlify.com"
+      "label": "Entrar en LINA",
+      "href": "https://app.linahealthtranscript.com"
     }
-  },
-  "contextual": {
-    "options": [
-      "copy",
-      "view",
-      "chatgpt",
-      "claude",
-      "perplexity",
-      "mcp",
-      "cursor",
-      "vscode"
-    ]
   },
   "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
-    }
+    "links": [
+      {
+        "header": "LINA Transcript",
+        "items": [
+          {
+            "label": "Entrar en la plataforma",
+            "href": "https://app.linahealthtranscript.com"
+          },
+          {
+            "label": "Doole Health",
+            "href": "https://doolehealth.com"
+          }
+        ]
+      }
+    ]
   }
 }

@@ -1,0 +1,132 @@
+---
+title: "La nota clínica"
+description: "Generarla, revisarla, editarla y aprobarla."
+---
+
+La nota es un **borrador**. LINA lo deja claro en la propia tarjeta: «Propuesta
+generada por IA, pendiente de tu revisión. No se enviará a nadie ni se
+incorporará a ningún sistema hasta que la apruebes».
+
+## Generarla
+
+Si elegiste plantilla antes de grabar, la nota se genera sola al terminar de
+procesar la consulta. Si no, puedes pedirla desde la propia consulta, indicando:
+
+<AccordionGroup>
+  <Accordion title="Idioma de la nota" icon="language">
+    Puede ser distinto del idioma de la transcripción. Grabas en catalán y
+    obtienes la nota en castellano, si es lo que necesita tu sistema.
+  </Accordion>
+  <Accordion title="Información adicional del paciente" icon="notes-medical">
+    Antecedentes, medicación actual, alergias, contexto relevante. Es texto que
+    entra como contexto para redactar la nota, aunque no se haya dicho en voz
+    alta durante la consulta.
+  </Accordion>
+</AccordionGroup>
+
+Verás la nota **escribirse en pantalla** mientras el modelo la redacta; no hace
+falta esperar a que termine para empezar a leerla.
+
+## Qué contiene
+
+Con la plantilla por defecto, formato SOAP:
+
+| Sección | Qué recoge |
+| --- | --- |
+| Motivo de consulta | Por qué viene el paciente. |
+| Subjetivo | Lo que cuenta el paciente. |
+| Objetivo | Exploración, constantes, pruebas. |
+| Evaluación | Valoración clínica. |
+| Plan | Qué se hace y qué se cita. |
+
+Con tus propias plantillas, las secciones son las que tú definas.
+
+<Card title="Plantillas" icon="table-layout" href="/personalizacion/plantillas" horizontal>
+  Cómo crear la estructura que usa tu servicio.
+</Card>
+
+## Comprobar de dónde sale cada cosa
+
+Puedes pulsar sobre lo que dice la nota para ver **en qué punto de la
+transcripción se apoya**. Es la forma rápida de resolver la duda que importa:
+«esto que pone aquí, ¿se dijo realmente?».
+
+<Warning>
+  Un modelo de lenguaje puede redactar frases plausibles que nadie pronunció.
+  Las secciones con datos concretos —dosis, pautas, cifras— son las que más
+  merece la pena contrastar con el audio.
+</Warning>
+
+## Avisos de la propia nota
+
+Según cómo esté configurada tu instalación, junto a la nota pueden aparecer:
+
+<AccordionGroup>
+  <Accordion title="Posibles omisiones" icon="triangle-exclamation">
+    Contenido presente en la transcripción que no ha quedado reflejado en la
+    nota, o términos de baja confianza que conviene contrastar con el audio.
+  </Accordion>
+  <Accordion title="Codificación clínica" icon="hashtag">
+    Diagnósticos y procedimientos detectados, con su código. Lo que no consigue
+    codificar lo marca como **sin código — revisar** en lugar de inventarse
+    uno. Si en tu instalación no está activada, la tarjeta lo indica.
+  </Accordion>
+  <Accordion title="Fechas reconocidas en la consulta" icon="calendar">
+    Referencias temporales que se dijeron en voz alta («hace tres semanas»,
+    «el martes que viene») resueltas a fechas concretas.
+  </Accordion>
+  <Accordion title="Documentos que podrían corresponder" icon="file-lines">
+    Sugerencias de documentos derivados. **Ninguno se genera solo**: se abren
+    desde el Asistente cuando quieras emitirlos.
+  </Accordion>
+</AccordionGroup>
+
+## Editarla
+
+**Editar nota** te deja escribir sobre el texto. Cuando guardas, la nota queda
+marcada como **Editada por el profesional**, y puedes consultar en cualquier
+momento la **versión generada por la IA antes de tu edición**.
+
+## Regenerarla
+
+**Regenerar** vuelve a redactar la nota desde la misma transcripción. Úsalo
+cuando:
+
+- Has corregido quién es quién en la transcripción.
+- Quieres añadir o cambiar la información adicional del paciente.
+- Quieres la nota en otro idioma o con otra plantilla.
+
+<Warning>
+  Regenerar sustituye la nota actual. Si la habías editado a mano, revisa que
+  no pierdes ese trabajo.
+</Warning>
+
+## Aprobar o rechazar
+
+Es el paso que convierte un borrador en algo que tú respaldas.
+
+<Steps>
+  <Step title="Aprobar nota">
+    Queda marcada como **Aprobada por el profesional**, con la fecha. Si te
+    arrepientes, puedes **Retirar aprobación**.
+  </Step>
+  <Step title="Rechazar">
+    Se te pide el motivo —qué falta o qué está mal—. La nota queda marcada como
+    rechazada, y sigues pudiendo aprobarla más tarde si la corriges.
+  </Step>
+</Steps>
+
+<Info>
+  El motivo del rechazo no es burocracia: es lo que permite ver qué falla de
+  forma sistemática en tu servicio y corregirlo.
+</Info>
+
+## Valorarla
+
+Al pie de la nota hay un **👍 / 👎**. Si marcas un problema puedes indicar el
+motivo (falta información, dice algo que no se dijo, hay un error clínico,
+está en la sección equivocada…) y escribir un comentario.
+
+<Card title="Valoraciones" icon="thumbs-up" href="/consultas/valoraciones" horizontal>
+  Qué pasa con lo que marcas.
+</Card>

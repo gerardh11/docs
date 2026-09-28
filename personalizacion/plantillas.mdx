@@ -1,0 +1,140 @@
+---
+title: "Plantillas"
+description: "Definir la estructura con la que se redacta la nota."
+---
+
+Una plantilla es la estructura de la nota: qué secciones tiene, en qué orden y
+con qué nivel de detalle. Es lo que hace que la nota salga como la escribirías
+tú y no como la escribiría un modelo genérico.
+
+## La biblioteca
+
+<Frame caption="Arriba, las pestañas por tipo y las favoritas; a la derecha, las cuatro formas de crear una nueva.">
+  <img src="/images/plantillas.png" alt="Pantalla de plantillas" />
+</Frame>
+
+En **Plantillas** verás tres cosas:
+
+- Las **plantillas de serie**, como Consulta General (SOAP), Carta al médico de
+  cabecera, Carta de derivación o Nota Clínica.
+- Las **tuyas**, las que has creado o duplicado.
+- Las **del centro**, si alguien las ha compartido con el equipo.
+
+De cada una puedes ver quién la creó, cuándo se editó por última vez y cuándo
+se usó por última vez. Esa última columna es la que dice qué plantillas sobran.
+
+<Tip>
+  Marca como **favoritas** las dos o tres que uses a diario: aparecen las
+  primeras en el desplegable al empezar una consulta, que es donde te ahorran
+  clics.
+</Tip>
+
+### Los tres tipos
+
+Las pestañas de arriba filtran por tipo:
+
+| Tipo | Qué es |
+| --- | --- |
+| **Nota** | Texto clínico estructurado: SOAP, nota clínica, cartas. |
+| **Doc** | Documentos más extensos. |
+| **Formulario** | Campos concretos a rellenar, útil para registros o recogida estructurada de datos. |
+
+## Crear una
+
+Hay cuatro caminos, y el que te conviene depende de dónde partas:
+
+<CardGroup cols={2}>
+  <Card title="Biblioteca" icon="books">
+    Partir de una plantilla ya preparada por LINA Transcript y adaptarla. La vía
+    rápida.
+  </Card>
+  <Card title="Desde PDF" icon="file-pdf">
+    Subes el formulario o informe que ya usas **en papel** y el sistema lo
+    convierte en plantilla.
+  </Card>
+  <Card title="Con IA" icon="wand-magic-sparkles">
+    Describes en lenguaje natural cómo quieres la nota y se genera la plantilla.
+  </Card>
+  <Card title="Nueva plantilla" icon="pen-to-square">
+    La construyes tú desde cero.
+  </Card>
+</CardGroup>
+
+<Tip>
+  Si ya tenéis un impreso en papel que funciona, **Desde PDF** es lo más rápido
+  que existe: el formato que el servicio ya conoce, sin tener que describirlo.
+</Tip>
+
+Las plantillas de serie no se editan directamente; para partir de una, usa
+**Duplicar para editar**.
+
+Al crear o editar una plantilla defines:
+
+| Campo | Qué es |
+| --- | --- |
+| Nombre | Cómo la reconocerás en el desplegable. |
+| Tipo | Nota, Doc o Formulario. |
+| Categoría | Clínica, administrativa o para el paciente. |
+| Estructura | Las secciones y las instrucciones de redacción. |
+
+### Escribir la estructura
+
+Describe las secciones que quieres y qué va en cada una. Cuanto más concreto
+seas, menos tendrás que corregir después:
+
+```
+Motivo de consulta
+  Una frase, en palabras del paciente.
+
+Antecedentes relevantes
+  Solo los que tengan que ver con el motivo de hoy.
+
+Exploración
+  Constantes y hallazgos. Si no se exploró, escribe "no explorado".
+
+Plan
+  Numerado. Incluye pauta completa de los fármacos que se prescriban.
+```
+
+<Tip>
+  Instrucciones como «si no se exploró, escribe *no explorado*» evitan el
+  problema más molesto: que el modelo rellene un hueco con algo verosímil que
+  nadie dijo.
+</Tip>
+
+### Probarla antes de usarla
+
+El editor puede **generar un ejemplo** con la plantilla que estás escribiendo,
+para que veas cómo queda antes de estrenarla en una consulta real. También
+puedes pedirle cambios en lenguaje normal («¿qué quieres cambiar?») en lugar de
+reescribir la estructura a mano.
+
+## Compartirla con el equipo
+
+Cada plantilla tiene una **visibilidad**:
+
+<CardGroup cols={2}>
+  <Card title="Solo yo" icon="lock">
+    Privada. Es como nacen todas.
+  </Card>
+  <Card title="Equipo" icon="users">
+    Compartida con el centro: cualquiera del equipo puede usarla.
+  </Card>
+</CardGroup>
+
+Cambiarla es un clic. Compartir una plantilla es la forma de que todo un
+servicio documente igual sin tener que ponerse de acuerdo cada vez.
+
+<Info>
+  En el **plan gratuito** puedes tener hasta 2 plantillas propias, además de
+  las de serie. El plan Pro no tiene límite.
+</Info>
+
+## Cambiar la plantilla de una consulta ya hecha
+
+Se puede: abre la consulta y **regenera** la nota eligiendo otra plantilla. La
+transcripción no se vuelve a calcular, así que es rápido.
+
+<Card title="Regenerar la nota" icon="rotate" href="/consultas/nota-clinica#regenerarla" horizontal>
+  Qué se conserva y qué se pierde al regenerar.
+</Card>

@@ -1,0 +1,117 @@
+---
+title: "Dónde se procesan los datos"
+description: "Qué sale de la instalación y qué no, según cómo esté configurada la tuya."
+---
+
+LINA puede funcionar de dos maneras, y la diferencia importa: determina si el
+contenido de tus consultas sale del servidor de tu centro.
+
+## Ver en qué modo estás
+
+En **Configuración** tienes el modo activo de esta instalación, marcado como
+**En uso**. No hay que adivinarlo: la propia pantalla lo dice, y la tarjeta de
+la nota también avisa en cada consulta.
+
+<Frame caption="La tarjeta marcada «En uso» indica el modo activo en tu instalación.">
+  <img src="/images/configuracion.png" alt="Pantalla de configuración con los modos local y cloud" />
+</Frame>
+
+Al pie verás además el detalle técnico de esta instalación: el proveedor, el
+modelo que redacta la nota y el que transcribe el audio.
+
+<Info>
+  Este ajuste **lo gestiona el proveedor del servicio**. Puedes consultar dónde
+  se ejecutan los modelos, pero no cambiarlo desde la aplicación: afecta a
+  todos los centros de la instalación y depende de los acuerdos de tratamiento
+  de datos firmados. Si necesitas el modo local, escríbenos y lo configuramos.
+</Info>
+
+## Modo Local
+
+Los modelos corren en la propia instalación. **Ningún dato de salud sale del
+servidor.**
+
+<CardGroup cols={2}>
+  <Card title="A favor" icon="shield-check">
+    - Ningún dato sale de la instalación
+    - Los 8 idiomas disponibles
+    - Identificación de pacientes por huella de voz
+  </Card>
+  <Card title="En contra" icon="gauge-simple-low">
+    - Más lento: limitado por la GPU del servidor
+  </Card>
+</CardGroup>
+
+## Modo Cloud
+
+Los modelos de transcripción y de redacción se ejecutan fuera del servidor, en
+servicios externos.
+
+<Warning>
+  En modo Cloud, **el texto de la consulta sale de la instalación**. Antes de
+  usarlo con pacientes reales, comprueba que el tratamiento está cubierto por
+  los contratos de encargado de tratamiento de tu organización.
+</Warning>
+
+<CardGroup cols={2}>
+  <Card title="A favor" icon="bolt">
+    - Notas más rápidas y de mejor calidad
+    - Modelos más potentes que los que cabe ejecutar en el servidor
+  </Card>
+  <Card title="En contra" icon="cloud-arrow-up">
+    - El contenido de la consulta sale de la instalación
+    - Menos idiomas que en local
+  </Card>
+</CardGroup>
+
+### Lo que se queda en casa en cualquier caso
+
+<Info>
+  La **identificación por huella de voz se mantiene siempre en local**, también
+  en modo Cloud. La segmentación por hablantes la hace el proveedor, pero
+  ponerles nombre sigue siendo local: las huellas se comparan dentro de la
+  instalación, así que los datos biométricos no viajan a ningún servicio
+  externo.
+</Info>
+
+Tres detalles que suelen preguntarse al revisar el modo Cloud:
+
+- **El audio va en la propia petición** y no queda almacenado en ningún bucket
+  intermedio.
+- **Requiere acuerdo de tratamiento de datos** con el proveedor, y base
+  jurídica frente al cliente final.
+- **El servidor sigue necesitando su GPU** para comparar las huellas de voz,
+  aunque queda mucho menos cargada que en modo local.
+
+### Idiomas en modo Cloud
+
+En modo Cloud hay menos idiomas disponibles que en local. Una consulta en un
+idioma no admitido **falla con un aviso** en vez de transcribirse mal, que es
+el comportamiento que interesa: un error visible es mejor que una nota
+plausible construida sobre una transcripción equivocada.
+
+## Modo mixto
+
+Hay una configuración intermedia: **la nota se redacta fuera, pero el audio se
+sigue transcribiendo en la instalación**. Se conservan los 8 idiomas y la
+transcripción sigue usando la GPU del servidor; lo único que sale es el texto
+para redactar la nota.
+
+## Lo que LINA nunca hace
+
+- **No escribe en tu historia clínica.** Para que una nota llegue a tu sistema,
+  la sacas tú: copiando, exportando o enviándola.
+- **No comparte datos entre centros.** Pacientes, plantillas y huellas de voz
+  se quedan en el centro donde se crearon.
+- **No manda contenido clínico a soporte.** Cuando marcas un problema con 👎, el
+  aviso lleva identificadores y tu comentario, no la nota ni la transcripción.
+
+<Card title="Valoraciones" icon="thumbs-up" href="/consultas/valoraciones" horizontal>
+  Exactamente qué se envía cuando marcas un problema.
+</Card>
+
+## Cambios de modo
+
+Si el proveedor cambia el modo de la instalación, **las consultas ya procesadas
+no cambian**: el cambio afecta a las nuevas. La pantalla de configuración
+guarda la fecha del último cambio.

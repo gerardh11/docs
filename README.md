@@ -1,55 +1,92 @@
-# Mintlify Starter Kit
+# Guía de usuario de LINA Transcript
 
-Use the starter kit to get your docs deployed and ready to customize.
+Documentación pública de la plataforma, publicada con [Mintlify](https://mintlify.com)
+desde el proyecto **linatranscript** de la organización DOOLE HEALTH.
 
-Click the green **Use this template** button at the top of this repo to copy the Mintlify starter kit. The starter kit contains examples with
+- Sitio: https://linatranscript.mintlify.app
+- Dominio propio: `docs.linahealthtranscript.com`
 
-- Guide pages
-- Navigation
-- Customizations
-- API reference pages
-- Use of popular components
-
-**[Follow the full quickstart guide](https://starter.mintlify.com/quickstart)**
-
-## AI-assisted writing
-
-Set up your AI coding tool to work with Mintlify:
+## Ver los cambios en local
 
 ```bash
-npx skills add https://mintlify.com/docs
-```
-
-This command installs Mintlify's documentation skill for your configured AI tools like Claude Code, Cursor, Windsurf, and others. The skill includes component reference, writing standards, and workflow guidance.
-
-See the [AI tools guides](/ai-tools) for tool-specific setup.
-
-## Development
-
-Install the [Mintlify CLI](https://www.npmjs.com/package/mint) to preview your documentation changes locally. To install, use the following command:
-
-```
 npm i -g mint
+mint dev               # http://localhost:3000
 ```
 
-Run the following command at the root of your documentation, where your `docs.json` is located:
+Antes de hacer push:
 
+```bash
+mint validate          # build completo, en estricto
+mint broken-links      # enlaces internos
 ```
-mint dev
-```
 
-View your local preview at `http://localhost:3000`.
+## Publicar
 
-## Publishing changes
+No hay comando de despliegue. Mintlify observa este repositorio y **publica solo
+al hacer push a `main`**.
 
-Install our GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app) to propagate changes from your repo to your deployment. Changes are deployed to production automatically after pushing to the default branch.
+Al añadir una página hay que darla de alta en `docs.json`: una página que no
+está en `navigation` no aparece en el menú, aunque el fichero exista.
 
-## Need help?
+## Dos copias, y eso hay que resolverlo
 
-### Troubleshooting
+Este contenido existe **también** en el repositorio del producto,
+`DooleHealth/LinaTranscript-PyAnnoteAI`, en la carpeta `docs-site/`. Está ahí
+porque es donde se escribió: verificando cada afirmación contra el código que
+documenta.
 
-- If your dev environment isn't running: Run `mint update` to ensure you have the most recent version of the CLI.
-- If a page loads as a 404: Make sure you are running in a folder with a valid `docs.json`.
+Tener dos copias es una fuente de documentación desfasada. Conviene quedarse con
+una:
 
-### Resources
-- [Mintlify documentation](https://mintlify.com/docs)
+- **Recomendado:** apuntar el proyecto de Mintlify a
+  `DooleHealth/LinaTranscript-PyAnnoteAI`, rama `develop`, directorio
+  `docs-site`, y archivar este repositorio. La documentación viaja con el código
+  que describe, y queda dentro de la organización en lugar de en una cuenta
+  personal.
+- **Alternativa:** dejarlo aquí y borrar `docs-site/` del repositorio del
+  producto. Más simple de operar, a cambio de que sea más fácil que la
+  documentación se quede atrás cuando cambie la aplicación.
+
+Mientras haya dos, cualquier cambio hay que hacerlo en las dos.
+
+## Criterios de redacción
+
+1. **Solo se documenta lo que existe en el código.** Nada de funciones
+   prometidas ni de comportamiento supuesto.
+2. **Se avisa de los límites.** La nota es un borrador, la identificación por
+   exclusión es una deducción, el vocabulario no corrige nada. Documentar solo
+   lo que funciona bien genera desconfianza en cuanto falla algo.
+3. **Se escribe para quien está en consulta**, no para quien construye la
+   plataforma. Nada de «diarización», «LLM» o «ASR» sin explicar.
+
+## Relación con la guía en PDF
+
+Parte de **Lina Transcript — Guía básica de uso, v1.0 (septiembre de 2026)**, en
+castellano y catalán. Aquí está ampliada y corregida en tres puntos en los que
+la aplicación ha cambiado desde que se escribió el PDF:
+
+| Lo que dice el PDF | Lo que hace hoy la aplicación |
+| --- | --- |
+| «Configuración: solo lo cambia el propietario del centro» | Lo gestiona el proveedor del servicio. Ni el propietario del centro puede cambiarlo. |
+| Ocho secciones en el menú lateral | Diez: se añadieron **Terminología** y **Plan y facturación**. |
+| «Hay dos roles: propietario y miembro» | Tres: propietario, administrador y miembro. |
+
+Si se reedita el PDF, conviene corregirlo allí también.
+
+## Pendiente
+
+- **Rehacer `images/inicio.png` y `images/configuracion.png`**: vienen del PDF y
+  arrastran lo anterior —el menú con ocho secciones y la línea «Necesitas ser
+  propietario de un centro para cambiar este ajuste»—. El texto dice lo
+  correcto; las imágenes no.
+- **Capturas que faltan**: grabación en curso con el estado de pausa, tarjeta de
+  la nota con el aviso de revisión pendiente, y el comprobador de reglas de
+  terminología.
+- **Traducciones.** La plataforma está en español, catalán, inglés y chino; la
+  documentación solo en español. Mintlify lo soporta con
+  `navigation.languages` y un directorio por idioma. Conviene esperar a que la
+  versión española esté estable.
+- **IVA en la página de facturación.** No se afirma si los precios lo incluyen:
+  el precio de Stripe está como `tax_behavior: exclusive` y eso no se cambia
+  después de crearlo. Resolver primero en Stripe.
+- **Enlace desde la aplicación** al sitio de documentación.

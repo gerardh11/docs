@@ -1,0 +1,162 @@
+---
+title: "Grabar una consulta"
+description: "Las tres formas de meter una consulta en LINA y qué elegir en cada una."
+---
+
+Hay tres maneras de crear una consulta, y se eligen desde **Iniciar consulta**.
+
+<CardGroup cols={3}>
+  <Card title="Iniciar consulta" icon="microphone">
+    Grabar en directo, con el paciente delante.
+  </Card>
+  <Card title="Subir audio" icon="upload">
+    Procesar una grabación que ya tienes.
+  </Card>
+  <Card title="Dictar caso" icon="comment-dots">
+    Contarle tú el caso a LINA, sin paciente.
+  </Card>
+</CardGroup>
+
+## Antes de grabar: los cuatro selectores
+
+Debajo de los tres botones está **Configuración de la consulta**. Son cuatro
+selectores, y condicionan el resultado más que nada de lo que hagas después.
+
+<Frame caption="Los cuatro selectores de la barra: plantilla, idioma de la nota, micrófono e idioma de la conversación.">
+  <img src="/images/barra-configuracion.png" alt="Barra de configuración de la consulta" />
+</Frame>
+
+<AccordionGroup>
+  <Accordion title="Plantilla" icon="table-layout">
+    El formato de la nota que se generará al terminar: Consulta General SOAP,
+    Carta al médico de cabecera, Carta de derivación, Nota Clínica… Por defecto,
+    **Consulta General (SOAP)**. Si has marcado plantillas como favoritas,
+    aparecen primero.
+
+    <Warning>
+      Elígela **antes** de grabar. Cambiarla después obliga a regenerar la nota.
+    </Warning>
+  </Accordion>
+  <Accordion title="Nota — el idioma en que se escribirá" icon="file-pen">
+    **Español, Català, English, 中文, Français o Português.** Es independiente
+    del idioma en que se hable: puedes atender en catalán y pedir la nota en
+    inglés.
+  </Accordion>
+  <Accordion title="Micrófono" icon="headphones">
+    El dispositivo de entrada de audio. Si usas un micro externo o de
+    sobremesa, selecciónalo aquí antes de empezar. **La calidad del audio es el
+    factor que más influye en la calidad de la nota.**
+  </Accordion>
+  <Accordion title="Idioma de la conversación" icon="language">
+    **Detectar automáticamente** sirve para la mayoría de los casos. Si sabes
+    que la visita será en un idioma concreto, fíjalo (Español, Català, English,
+    中文) para ganar precisión. Hay modos mixtos —**Español + Català** y
+    **Español + Català + English**— útiles cuando médico y paciente cambian de
+    idioma.
+
+    <Tip>
+      Fijar el idioma en lugar de dejar la detección automática mejora
+      notablemente la transcripción en consultas cortas o con mucho ruido.
+    </Tip>
+  </Accordion>
+</AccordionGroup>
+
+## El flujo, en cinco pasos
+
+<Steps>
+  <Step title="Configura la consulta">
+    Despliega **Configuración de la consulta** y revisa los cuatro selectores.
+  </Step>
+  <Step title="Pulsa «Iniciar consulta»">
+    Acepta el permiso de micrófono del navegador si es la primera vez.
+  </Step>
+  <Step title="Habla con normalidad">
+    No hace falta dictar ni estructurar: el sistema separa las voces. Evita
+    solapar la conversación con ruido de fondo (radio, pasillo).
+  </Step>
+  <Step title="Finaliza la consulta">
+    La nota se genera **automáticamente** con la plantilla que elegiste. No hay
+    que pedirla aparte.
+  </Step>
+  <Step title="Revisa, corrige y aprueba">
+    Lee la nota, corrige lo que haga falta y cópiala o expórtala a tu historia
+    clínica. Queda guardada en **Conversaciones**.
+  </Step>
+</Steps>
+
+## Grabar en directo
+
+Pulsa **Iniciar consulta**. Durante la grabación verás:
+
+- El tiempo transcurrido y un indicador **EN VIVO**.
+- Una transcripción provisional en pantalla, según el navegador. Es orientativa:
+  la buena se calcula al guardar, junto con la separación de hablantes.
+
+### Pausar
+
+El botón de pausa detiene la captura. La pantalla pasa a **PAUSADA · no se está
+grabando**, y al reanudar se continúa la misma consulta.
+
+Úsalo cuando el paciente se desviste o se explora, cuando entra alguien ajeno a
+la consulta, o cuando vais a hablar de algo que no tiene por qué quedar grabado.
+
+### Avisos de duración
+
+<Warning>
+  A la **hora** de grabación LINA te pregunta si la consulta sigue en marcha.
+  Puedes responder **Sigo en consulta** y continuar. A las **3 horas la
+  grabación se detiene sola**, y podrás guardar lo grabado.
+</Warning>
+
+El aviso existe por una razón práctica: una grabación olvidada sigue captando
+todo lo que se hable en la sala.
+
+### Terminar
+
+- **Guardar y procesar** cierra la consulta y la manda a procesar. Te pedirá un
+  título.
+- **Descartar** tira la grabación. No se guarda nada.
+
+## Subir un audio
+
+Si ya tienes la grabación hecha, **Subir audio** la procesa igual. Admite
+**MP3, WAV, M4A, MP4, AVI, MOV y WebM** (audio o vídeo).
+
+Al subirlo puedes indicar:
+
+| Campo | Para qué |
+| --- | --- |
+| Título | Cómo lo encontrarás después. |
+| Idioma del audio | El idioma hablado en la grabación. |
+| Idioma de salida | En qué idioma quieres la nota, que puede ser otro. |
+| Paciente | Opcional, para asociar la consulta a una ficha. |
+| Plantilla | La estructura de la nota. |
+
+<Tip>
+  El idioma de salida es lo que permite grabar en catalán y obtener la nota en
+  castellano, o al revés.
+</Tip>
+
+## Dictar un caso
+
+**Dictar caso** es para cuando no hay conversación: le cuentas tú el caso a
+LINA. Hay dos formas:
+
+<CardGroup cols={2}>
+  <Card title="Inteligente" icon="wand-magic-sparkles">
+    Lo que dictas se organiza en la nota clínica, repartido por secciones.
+  </Card>
+  <Card title="Literal" icon="quote-left">
+    Se transcribe tal cual, sin reelaborar. Para cuando quieres control total
+    sobre las palabras.
+  </Card>
+</CardGroup>
+
+También puedes asociarlo a un paciente y elegir plantilla e idioma, igual que
+en una consulta grabada.
+
+## Y después
+
+<Card title="La transcripción" icon="align-left" href="/consultas/transcripcion" horizontal>
+  Cómo se separa a los hablantes y cómo corregir la atribución.
+</Card>

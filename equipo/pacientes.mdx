@@ -1,0 +1,69 @@
+---
+title: "Pacientes"
+description: "Fichas de paciente y para qué sirve asociar una consulta a una de ellas."
+---
+
+Puedes usar LINA sin registrar pacientes: una consulta suelta se graba,
+transcribe y redacta igual. Las fichas sirven para cuando quieres seguimiento.
+
+## Qué ganas asociando la consulta a un paciente
+
+<CardGroup cols={2}>
+  <Card title="Identificación por exclusión" icon="user-check">
+    Si la consulta tiene paciente y solo hay dos voces, LINA deduce cuál es la
+    suya y la etiqueta, sin necesidad de huella de voz.
+  </Card>
+  <Card title="Historial" icon="clock-rotate-left">
+    Todas sus consultas juntas, en vez de dispersas por la lista general.
+  </Card>
+  <Card title="Envío directo" icon="envelope">
+    Si la ficha tiene correo, enviarle la nota o un resumen es inmediato.
+  </Card>
+  <Card title="Archivos" icon="paperclip">
+    Documentación asociada a la persona, no a una consulta concreta.
+  </Card>
+</CardGroup>
+
+## Crear una ficha
+
+**Nuevo Paciente**. Solo el nombre es obligatorio; el resto se rellena cuando
+haga falta:
+
+| Campo | Para qué |
+| --- | --- |
+| Identificador (DNI/NIE/SS) | Localizarlo sin ambigüedad. |
+| Nombre y apellidos | Lo que aparecerá en la transcripción. |
+| Fecha de nacimiento, sexo | Contexto clínico. |
+| Email, teléfono | Envío de notas y documentos. |
+| ID Médico / Historia Clínica | Cruzarlo con tu sistema. |
+| Antecedentes, alergias | Contexto que puede usarse al redactar la nota. |
+
+<Tip>
+  Las **alergias** se ven de un vistazo en el listado. Es el dato que más
+  cuesta recuperar en el momento justo, y por eso está ahí.
+</Tip>
+
+## Buscar
+
+El buscador funciona por nombre, apellido e identificador. Con la lista llena,
+es más rápido que ir paginando.
+
+## Asociar una consulta
+
+Se hace al crearla: tanto al **subir un audio** como al **dictar un caso** hay
+un desplegable de paciente. Es opcional.
+
+## Datos y responsabilidad
+
+<Warning>
+  Una ficha de paciente son datos personales de salud. Registra lo que
+  necesites para trabajar, no todo lo que podrías registrar, y asegúrate de que
+  el tratamiento de esos datos está cubierto por la documentación de tu centro.
+</Warning>
+
+Las fichas son del centro: quien pertenece a tu centro puede verlas. No se
+comparten entre centros distintos.
+
+<Card title="Huellas de voz" icon="fingerprint" href="/equipo/huellas-de-voz" horizontal>
+  Registrar la voz de un paciente es otra cosa, y tiene más implicaciones.
+</Card>

@@ -1,0 +1,114 @@
+---
+title: "Tu primera consulta"
+description: "De abrir LINA a tener la nota clínica escrita y aprobada."
+---
+
+Esta página recorre una consulta entera. Si solo vas a leer una, que sea esta.
+
+## Antes de empezar
+
+<Steps>
+  <Step title="Pide permiso al paciente">
+    Estás grabando una conversación clínica. Díselo y déjalo registrado según
+    el procedimiento de tu centro.
+
+    <Card title="Consentimiento" icon="clipboard-check" href="/privacidad/consentimiento" horizontal>
+      Qué conviene decir y qué queda guardado.
+    </Card>
+  </Step>
+  <Step title="Comprueba el micrófono">
+    En **Iniciar consulta** puedes elegir qué micrófono usar. Si tienes varios
+    (el del portátil, unos auriculares, uno de mesa), elige el que esté más
+    cerca de los dos que hablan.
+  </Step>
+  <Step title="Elige el idioma">
+    Marcar el idioma real de la consulta da mejor resultado que dejar
+    **Detectar automáticamente**. Si en tu consulta se mezclan castellano y
+    catalán, hay opciones combinadas para eso.
+  </Step>
+</Steps>
+
+## Grabar
+
+Pulsa **Iniciar consulta**. Mientras grabas verás el tiempo transcurrido y,
+según el navegador, una transcripción provisional en pantalla.
+
+<Tip>
+  Puedes **pausar y reanudar** las veces que haga falta. Lo que ocurre durante
+  la pausa no se graba, y al reanudar la consulta continúa en el mismo sitio:
+  no se pierde el contexto ni se crea una consulta nueva.
+</Tip>
+
+Cuando termines, pulsa **Finalizar**. LINA te pedirá un título para la consulta
+y empezará a procesarla.
+
+## Mientras se procesa
+
+Verás la consulta en estado **Procesando**. Durante ese rato LINA:
+
+1. Transcribe el audio.
+2. Separa las intervenciones por interlocutor.
+3. Redacta el borrador de nota con la plantilla elegida.
+
+No hace falta que te quedes mirando: puedes salir, atender al siguiente
+paciente y volver a la consulta desde **Conversaciones**.
+
+## Revisar el resultado
+
+Al abrir la consulta verás tres cosas:
+
+<AccordionGroup>
+  <Accordion title="El audio, con las intervenciones marcadas" icon="waveform">
+    Puedes reproducir la grabación y saltar directamente al momento en que se
+    dijo algo. Si LINA ha confundido quién habla, puedes reasignar el
+    interlocutor.
+  </Accordion>
+  <Accordion title="La transcripción" icon="align-left">
+    El texto completo, intervención a intervención.
+  </Accordion>
+  <Accordion title="La nota clínica" icon="file-medical">
+    El borrador redactado. Arriba verás el aviso de que está **pendiente de tu
+    revisión**.
+  </Accordion>
+</AccordionGroup>
+
+## Aprobarla
+
+Léela. Si está bien, pulsa **Aprobar nota**. Si no:
+
+- **Edítala** directamente sobre el texto.
+- Pide cambios al **Asistente** («resume el plan en tres puntos», «añade la
+  exploración»).
+- **Regenérala**, con información adicional si hace falta.
+- **Recházala** indicando el motivo, si el resultado no sirve.
+
+<Warning>
+  Mientras no la apruebes, la nota queda marcada como propuesta pendiente. No
+  se envía a nadie ni se incorpora a ningún sistema por su cuenta.
+</Warning>
+
+## Llevarla a la historia clínica
+
+LINA no escribe en tu sistema. Para pasar la nota:
+
+- **Copiar** al portapapeles y pegarla donde la necesites.
+- **Exportar** a PDF o Word.
+- **Enviar por correo** al paciente o a quien corresponda.
+
+<Card title="Exportar y enviar" icon="file-export" href="/consultas/exportar" horizontal>
+  Formatos disponibles y qué se comprueba antes de dejarte exportar.
+</Card>
+
+## Y después
+
+Cuando hayas hecho tres o cuatro consultas, vale la pena dedicar diez minutos a
+dos cosas que cambian mucho el resultado:
+
+<CardGroup cols={2}>
+  <Card title="Crear tu plantilla" icon="table-layout" href="/personalizacion/plantillas">
+    Para que la nota salga con la estructura de tu servicio.
+  </Card>
+  <Card title="Reglas de terminología" icon="book-open" href="/personalizacion/terminologia">
+    Para que deje de escribir mal los términos y fármacos que usas a diario.
+  </Card>
+</CardGroup>

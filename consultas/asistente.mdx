@@ -1,0 +1,71 @@
+---
+title: "Asistente y documentos"
+description: "Pedir cambios sobre la nota y generar informes, justificantes o resúmenes."
+---
+
+El botón **Asistente**, sobre la nota, abre un chat que conoce esta consulta:
+su transcripción y su nota. Sirve para dos cosas.
+
+## Pedir cambios sobre la nota
+
+Escríbele lo que quieres en lenguaje normal:
+
+- «Amplía la evaluación».
+- «Resume el plan en tres puntos».
+- «Pasa la exploración a viñetas».
+- «Quita la referencia al tratamiento anterior, era de otro paciente».
+
+Cuando el cambio afecta a la nota, verás la marca **✓ nota actualizada**. El
+cambio queda en la nota, no solo en el chat.
+
+<Tip>
+  Puedes tener **varios chats** sobre la misma consulta y volver a ellos desde
+  **Chats de esta nota**. Útil para separar «corregir la nota» de «preparar el
+  informe de derivación».
+</Tip>
+
+## Generar documentos derivados
+
+Desde **Generar documento adicional** puedes crear, a partir de la misma
+consulta, documentos de tres familias:
+
+<CardGroup cols={3}>
+  <Card title="Documentos clínicos" icon="file-medical">
+    Informes, derivaciones y documentos para otros profesionales.
+  </Card>
+  <Card title="Documentos administrativos" icon="folder-open">
+    Justificantes y documentación de gestión.
+  </Card>
+  <Card title="Para el paciente" icon="user">
+    Resúmenes e indicaciones escritas para llevarse a casa.
+  </Card>
+</CardGroup>
+
+Al generarlo puedes elegir el **idioma del documento** y añadir
+**instrucciones adicionales** —contexto que se le pasa al modelo, por ejemplo
+«dirigido a traumatología» o «incluye la pauta completa de analgesia»—.
+
+Los documentos generados quedan guardados en la consulta, bajo **Documentos
+adicionales**, y puedes eliminarlos cuando ya no los necesites.
+
+<Info>
+  Si la nota trae una lista de **documentos que podrían corresponder a esta
+  consulta**, es solo una sugerencia. Ninguno se genera solo: se emiten desde
+  aquí, cuando tú lo decides.
+</Info>
+
+## Lo que hay que tener presente
+
+<Warning>
+  Todo lo que sale del asistente está **generado por IA a partir de la
+  transcripción**. Un informe de derivación o un justificante llevan tu firma,
+  no la del modelo: revísalos enteros antes de emitirlos.
+</Warning>
+
+La propia pantalla te recuerda dónde se está ejecutando el modelo: si es local,
+nada sale del servidor; si es en la nube, el texto de la consulta sale de la
+instalación.
+
+<Card title="Dónde se procesan los datos" icon="lock" href="/privacidad/donde-se-procesan-los-datos" horizontal>
+  Qué significa cada modo y cómo saber en cuál estás.
+</Card>

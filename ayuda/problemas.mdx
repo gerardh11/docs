@@ -1,0 +1,125 @@
+---
+title: "Cuando algo no sale bien"
+description: "Los fallos habituales y qué hacer con cada uno."
+---
+
+## No se oye nada / la transcripción sale vacía
+
+Si al abrir la consulta ves **«No se encontró transcripción para este audio»**,
+el audio no contenía voz reconocible.
+
+<Steps>
+  <Step title="Comprueba el micrófono del navegador">
+    LINA necesita permiso para usar el micrófono. Si el navegador lo bloqueó,
+    verás el icono de micrófono tachado en la barra de direcciones.
+  </Step>
+  <Step title="Comprueba qué micrófono estabas usando">
+    En la configuración de la consulta se elige el dispositivo. Si tenías unos
+    auriculares conectados pero hablabas lejos de ellos, el volumen puede haber
+    quedado por debajo del umbral.
+  </Step>
+  <Step title="Haz una prueba corta">
+    Graba 30 segundos hablando normal y míralo. Es más rápido que descubrirlo
+    en la siguiente consulta real.
+  </Step>
+</Steps>
+
+## Error al procesar el audio
+
+Verás **«Error al procesar el audio»** con la opción de **reintentar sin volver
+a subir el audio**. Úsala: la mayoría de estos fallos son transitorios.
+
+Si falla dos veces sobre el mismo audio, escríbenos con el identificador de la
+consulta.
+
+## Los hablantes están mezclados
+
+LINA ha separado mal las voces. Causas habituales:
+
+| Causa | Qué hacer |
+| --- | --- |
+| Hablaron a la vez buena parte de la consulta | Poco que hacer. Corrige la atribución a mano. |
+| El micrófono estaba mucho más cerca de uno | Colócalo en medio la próxima vez. |
+| Había una tercera persona no prevista | Asígnala como **persona nueva (externa)**. |
+
+Después de corregir la atribución, **regenera la nota** para que el cambio se
+note también en ella.
+
+<Card title="Corregir la atribución" icon="user-pen" href="/consultas/transcripcion#corregir-la-atribución" horizontal>
+  Cómo asignar cada voz.
+</Card>
+
+## Un término sale siempre mal escrito
+
+Por orden, de menos a más esfuerzo:
+
+<Steps>
+  <Step title="Añádelo al vocabulario clínico">
+    En **Seguridad clínica**. Sube la probabilidad de que se reconozca bien.
+  </Step>
+  <Step title="Si sigue fallando igual, crea una regla">
+    En **Terminología**: cuando se transcriba X, escribir Y. Pruébala en el
+    comprobador antes de dejarla activa.
+  </Step>
+  <Step title="Si es algo general, márcalo con 👎">
+    Un término que falla para todo el mundo se arregla mejor de raíz.
+  </Step>
+</Steps>
+
+## La nota dice algo que no se dijo
+
+Pulsa sobre esa parte de la nota para ver en qué punto de la transcripción se
+apoya. Si no se apoya en nada, has encontrado justo lo que hay que reportar:
+
+1. Corrígelo o elimínalo de la nota.
+2. Márcalo con **👎 → «Dice algo que no se dijo»**.
+
+<Warning>
+  Es el fallo que más importa de todos. No te quedes con la duda: si no
+  encuentras la frase en el audio, no estaba.
+</Warning>
+
+## La nota deja fuera media consulta
+
+Posibles motivos:
+
+- **La plantilla no tiene esa sección.** Si no hay sitio donde ponerlo, no se
+  pone. Revisa la estructura de tu plantilla.
+- **Se dijo de forma muy indirecta.** Puedes regenerar añadiendo el contexto en
+  **Información adicional del paciente**.
+- **La transcripción ya venía incompleta.** Compruébalo antes de culpar a la
+  nota: si el problema está en la transcripción, la nota no puede arreglarlo.
+
+## No puedo generar más notas
+
+Has agotado el cupo del plan gratuito: **5 al mes en todo el centro**, que se
+reinicia el día 1. La transcripción sigue funcionando con normalidad.
+
+<Card title="Planes" icon="credit-card" href="/equipo/plan-y-facturacion" horizontal>
+  Qué incluye Pro.
+</Card>
+
+## No me llega el correo de invitación o de verificación
+
+1. Mira la carpeta de correo no deseado.
+2. Las **invitaciones caducan a los 7 días**: pide que te la reenvíen desde
+   **Mi Centro → Pendientes de aceptar**.
+3. Para la verificación de cuenta, usa **Reenviar el enlace** desde la pantalla
+   de registro.
+
+## No veo Plan y facturación
+
+Esa sección solo la ven los propietarios y administradores del centro. Si
+necesitas acceso, pídeselo a quien administra el vuestro.
+
+## No puedo cambiar la Configuración
+
+Es lo esperado. El modo en que se ejecutan los modelos lo gestiona el proveedor
+del servicio, porque afecta a todos los centros de la instalación. Puedes verlo,
+pero no cambiarlo. Si necesitas el modo local, escríbenos.
+
+## Sigue sin funcionar
+
+<Card title="Contacto" icon="envelope" href="/ayuda/contacto" horizontal>
+  Qué contarnos para que podamos ayudarte rápido.
+</Card>
