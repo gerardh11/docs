@@ -106,7 +106,8 @@
     "options": [
       "download-pdf",
       "chatgpt",
-      "claude"
+      "claude",
+      "assistant"
     ],
     "display": "header"
   },
