@@ -81,7 +81,7 @@
     ],
     "primary": {
       "type": "button",
-      "label": "Entrar en LINA",
+      "label": "Ir a la plataforma",
       "href": "https://app.linahealthtranscript.com"
     }
   },
