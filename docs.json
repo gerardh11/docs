@@ -101,5 +101,18 @@
         ]
       }
     ]
+  },
+  "contextual": {
+    "options": [
+      "download-pdf",
+      "chatgpt",
+      "claude"
+    ],
+    "display": "header"
+  },
+  "integrations": {
+    "gtm": {
+      "tagId": "GTM-TBM6FBTV"
+    }
   }
 }
