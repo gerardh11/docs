@@ -51,6 +51,7 @@
           "equipo/pacientes",
           "equipo/huellas-de-voz",
           "equipo/mi-centro",
+          "equipo/roles-y-permisos",
           "equipo/plan-y-facturacion"
         ]
       },
